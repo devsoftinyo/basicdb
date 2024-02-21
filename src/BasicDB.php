@@ -64,7 +64,7 @@ class basicdb extends \PDO
 
     public function select($columns)
     {
-        $this->sql = str_replace(' * ', ' ' . $columns . ' ', $this->sql);
+        $this->sql = str_replace(' * ', ' ' . $columns . ' ', $this->sql ?? '');
         return $this;
     }
 
